@@ -1,0 +1,80 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Obrigado!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de agradecimento e download do app Planta Flex para iOS e Android">
+    <meta property="og:title" content="Obrigado por responder!">
+    <meta property="og:description" content="Baixe o app Planta Flex agora">
+    <meta property="og:type" content="website">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .btn {
+            display: block;
+            margin-top: 15px;
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        .android {
+            background-color: #3ddc84;
+        }
+
+        .ios {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <img src="obrigado.png" alt="Obrigado">
+
+        <h1>Obrigado por responder!</h1>
+        <p>Baixe nosso aplicativo abaixo:</p>
+
+        <a href="https://play.google.com/store/apps/details?id=com.clubeben.clubeplantobemestar&pcampaignid=web_share" class="btn android" target="_blank" rel="noopener noreferrer">
+            Baixar para Android
+        </a>
+
+        <a href="https://apps.apple.com/us/app/plantaoflex/id6443572321?l=pt-BR" class="btn ios" target="_blank" rel="noopener noreferrer">
+            Baixar para iOS
+        </a>
+
+    </div>
+
+</body>
+</html>
