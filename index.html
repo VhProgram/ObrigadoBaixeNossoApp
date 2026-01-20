@@ -1,117 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Obrigado!</title>
+  <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página de agradecimento e download do app Plantão Card para Android e iOS">
+  <!-- ESSENCIAL PARA ANDROID / IOS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <meta property="og:title" content="Obrigado por responder!">
-    <meta property="og:description" content="Baixe o app Plantão Card agora">
-    <meta property="og:type" content="website">
+  <title>Obrigado!</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
-        }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .container {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 24px;
+      text-align: center;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
 
-        /* ===== BANNER ===== */
-        .banner {
-            position: relative;
-            width: 100vw;
-        }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 24px;
+      display: block;
+    }
 
-        .banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+    h1 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      color: #333;
+    }
 
-        /* ===== BOTÕES INVISÍVEIS ===== */
-        .store-btn {
-            position: absolute;
-            width: 78px;
-            height: 78px;
-            border-radius: 50%;
-            cursor: pointer;
-            background: rgba(0, 0, 0, 0);
-        }
+    p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 24px;
+    }
 
-        /* === ALINHAMENTO PRECISO === */
-        .android-btn {
-            bottom: 12%;
-            left: 50%;
-            transform: translateX(-120%);
-        }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 12px;
+      background: #28a745;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
 
-        .ios-btn {
-            bottom: 12%;
-            left: 50%;
-            transform: translateX(20%);
-        }
+    .btn:active {
+      opacity: 0.85;
+    }
 
-        /* ===== MOBILE ===== */
-        @media (max-width: 480px) {
-            .store-btn {
-                width: 64px;
-                height: 64px;
-            }
+    .btn.android {
+      background: #3ddc84;
+      color: #000;
+    }
 
-            .android-btn {
-                bottom: 11%;
-                transform: translateX(-115%);
-            }
-
-            .ios-btn {
-                bottom: 11%;
-                transform: translateX(15%);
-            }
-        }
-    </style>
+    .btn.ios {
+      background: #000;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="container">
+  <div class="container">
 
-        <div class="banner">
+    <!-- IMAGEM: coloque o arquivo na mesma pasta -->
+    <img src="logo.png" alt="Logo">
 
-            <img src="obrigado.jpg" alt="Baixe o app Plantão Card">
+    <h1>Obrigado por responder!</h1>
+    <p>Baixe agora o aplicativo:</p>
 
-            <!-- ANDROID (LINK ATUALIZADO) -->
-            <a
-                href="https://play.google.com/store/apps/details?id=com.flutter_app.plantaocard&hl=en"
-                class="store-btn android-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Baixar aplicativo para Android">
-            </a>
+    <!-- BOTÕES FUNCIONAIS NO ANDROID -->
+    <a class="btn android"
+       href="https://play.google.com/store"
+       target="_blank"
+       rel="noopener">
+       Baixar no Android
+    </a>
 
-            <!-- IOS -->
-            <a
-                href="https://apps.apple.com/us/app/plantaoflex/id6443572321?l=pt-BR"
-                class="store-btn ios-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Baixar aplicativo para iOS">
-            </a>
+    <a class="btn ios"
+       href="https://apps.apple.com"
+       target="_blank"
+       rel="noopener">
+       Baixar no iOS
+    </a>
 
-        </div>
-
-    </div>
+  </div>
 
 </body>
 </html>
