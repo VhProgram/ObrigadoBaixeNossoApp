@@ -1,82 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Obrigado</title>
+    <meta charset="UTF-8">
+    <title>Obrigado!</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de agradecimento e download do app Plantão Card para Android e iOS">
 
-<style>
-    * {
-        box-sizing: border-box;
-    }
+    <meta property="og:title" content="Obrigado por responder!">
+    <meta property="og:description" content="Baixe o app Plantão Card agora">
+    <meta property="og:type" content="website">
 
-    body {
-        margin: 0;
-        background: #000;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    .banner {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        background: url("obrigado.jpg") center / cover no-repeat;
-    }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+        }
 
-    /* MOBILE */
-    @media (max-width: 768px) {
+        .container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ===== BANNER ===== */
         .banner {
-            background-image: url("obrigado-mobile.jpg");
+            position: relative;
+            width: 100vw;
         }
-    }
 
-    /* HOTSPOTS */
-    .btn {
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        cursor: pointer;
-        z-index: 10;
-    }
-
-    .android {
-        bottom: 18%;
-        left: 50%;
-        transform: translateX(-120%);
-    }
-
-    .ios {
-        bottom: 18%;
-        left: 50%;
-        transform: translateX(20%);
-    }
-
-    @media (max-width: 768px) {
-        .btn {
-            width: 64px;
-            height: 64px;
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
-    }
-</style>
+
+        /* ===== BOTÕES INVISÍVEIS ===== */
+        .store-btn {
+            position: absolute;
+            width: 78px;
+            height: 78px;
+            border-radius: 50%;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0);
+        }
+
+        /* === ALINHAMENTO PRECISO === */
+        .android-btn {
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(-120%);
+        }
+
+        .ios-btn {
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(20%);
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 480px) {
+            .store-btn {
+                width: 64px;
+                height: 64px;
+            }
+
+            .android-btn {
+                bottom: 11%;
+                transform: translateX(-115%);
+            }
+
+            .ios-btn {
+                bottom: 11%;
+                transform: translateX(15%);
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="banner">
+    <div class="container">
 
-    <!-- ANDROID -->
-    <div
-        class="btn android"
-        onclick="window.location.href='https://play.google.com/store/apps/details?id=com.flutter_app.plantaocard&hl=en'">
+        <div class="banner">
+
+            <img src="obrigado.jpg" alt="Baixe o app Plantão Card">
+
+            <!-- ANDROID (LINK ATUALIZADO) -->
+            <a
+                href="https://play.google.com/store/apps/details?id=com.flutter_app.plantaocard&hl=en"
+                class="store-btn android-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Baixar aplicativo para Android">
+            </a>
+
+            <!-- IOS -->
+            <a
+                href="https://apps.apple.com/us/app/plantaoflex/id6443572321?l=pt-BR"
+                class="store-btn ios-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Baixar aplicativo para iOS">
+            </a>
+
+        </div>
+
     </div>
-
-    <!-- IOS -->
-    <div
-        class="btn ios"
-        onclick="window.location.href='https://apps.apple.com/us/app/plantaoflex/id6443572321?l=pt-BR'">
-    </div>
-
-</div>
 
 </body>
 </html>
