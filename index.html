@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- ESSENCIAL MOBILE -->
+  <!-- LINHA ESSENCIAL PARA MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Obrigado</title>
@@ -24,25 +24,28 @@
       background: #000;
     }
 
+    /* CONTAINER PRINCIPAL */
     .page {
       position: relative;
       width: 100%;
     }
 
-    /* ARTE RESPONSIVA (SEM 100vh) */
+    /* ARTE RESPONSIVA */
     .bg {
       width: 100%;
+      max-width: 100%;
       height: auto;
       display: block;
     }
 
-    /* ÁREAS DE CLIQUE */
+    /* ÁREAS DE CLIQUE SOBRE OS ÍCONES */
     .click-area {
       position: absolute;
       width: 80px;
       height: 80px;
     }
 
+    /* AJUSTE DE POSIÇÃO (PODE ALTERAR SE PRECISAR) */
     .android {
       top: 62%;
       left: 32%;
@@ -65,23 +68,25 @@
 
   <div class="page">
 
-    <!-- ARTE -->
+    <!-- ARTE EM TELA CHEIA -->
     <img src="obrigado.jpg" alt="Obrigado" class="bg">
 
-    <!-- ANDROID -->
+    <!-- ÁREA CLICÁVEL ANDROID -->
     <div class="click-area android">
       <a href="https://play.google.com/store/search?q=PLANTAO%20FLEX&c=apps"
          target="_blank"
          rel="noopener"
-         aria-label="Baixar no Google Play"></a>
+         aria-label="Baixar no Google Play">
+      </a>
     </div>
 
-    <!-- IOS -->
+    <!-- ÁREA CLICÁVEL IOS -->
     <div class="click-area ios">
       <a href="https://apps.apple.com/br/app/plantaoflex/id6443572321"
          target="_blank"
          rel="noopener"
-         aria-label="Baixar na App Store"></a>
+         aria-label="Baixar na App Store">
+      </a>
     </div>
 
   </div>
