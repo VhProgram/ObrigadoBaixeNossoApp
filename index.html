@@ -40,6 +40,15 @@
             display: block;
         }
 
+        /* IMAGENS */
+        .img-desktop {
+            display: block;
+        }
+
+        .img-mobile {
+            display: none;
+        }
+
         /* ===== BOTÕES INVISÍVEIS ===== */
         .store-btn {
             position: absolute;
@@ -50,7 +59,7 @@
             background: rgba(0, 0, 0, 0);
         }
 
-        /* === ALINHAMENTO PRECISO === */
+        /* ALINHAMENTO */
         .android-btn {
             bottom: 12%;
             left: 50%;
@@ -64,19 +73,28 @@
         }
 
         /* ===== MOBILE ===== */
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
+
+            .img-desktop {
+                display: none;
+            }
+
+            .img-mobile {
+                display: block;
+            }
+
             .store-btn {
                 width: 64px;
                 height: 64px;
             }
 
             .android-btn {
-                bottom: 11%;
+                bottom: 10%;
                 transform: translateX(-115%);
             }
 
             .ios-btn {
-                bottom: 11%;
+                bottom: 10%;
                 transform: translateX(15%);
             }
         }
@@ -89,29 +107,5 @@
 
         <div class="banner">
 
-            <img src="obrigado.jpg" alt="Baixe o app Plantão Card">
-
-            <!-- ANDROID (LINK ATUALIZADO) -->
-            <a
-                href="https://play.google.com/store/apps/details?id=com.flutter_app.plantaocard&hl=en"
-                class="store-btn android-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Baixar aplicativo para Android">
-            </a>
-
-            <!-- IOS -->
-            <a
-                href="https://apps.apple.com/us/app/plantaoflex/id6443572321?l=pt-BR"
-                class="store-btn ios-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Baixar aplicativo para iOS">
-            </a>
-
-        </div>
-
-    </div>
-
-</body>
-</html>
+            <!-- DESKTOP -->
+            <img src="obrigado.jpg" class="img-desktop" alt="Baixe o
