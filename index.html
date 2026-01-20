@@ -12,55 +12,62 @@
     <meta property="og:type" content="website">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f4f6f8;
             text-align: center;
         }
-.container {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-}
 
-/* ===== BANNER ===== */
-.banner {
-    position: relative;
-    width: 100vw;
-    margin: 0;
-}
-
-.banner img {
-    width: 100vw;
-    height: auto;
-    border-radius: 0;
-    display: block;
-}
-
+        /* ===== CONTAINER ===== */
+        .container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
-        /* ===== BOTÕES INVISÍVEIS SOBRE OS ÍCONES ===== */
+        /* ===== BANNER TELA CHEIA ===== */
+        .banner {
+            position: relative;
+            width: 100vw;
+        }
+
+        .banner img {
+            width: 100vw;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== BOTÕES INVISÍVEIS ===== */
         .store-btn {
             position: absolute;
-            width: 88px;
-            height: 88px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             cursor: pointer;
             background: rgba(0, 0, 0, 0);
         }
 
-        /* POSIÇÃO PADRÃO (DESKTOP / TABLET) */
+        /* POSIÇÃO PROPORCIONAL */
         .android-btn {
-            bottom: 48px;
-            left: 30%;
+            bottom: 10%;
+            left: 35%;
             transform: translateX(-50%);
         }
 
         .ios-btn {
-            bottom: 48px;
-            left: 70%;
+            bottom: 10%;
+            left: 65%;
             transform: translateX(-50%);
+        }
+
+        /* ===== TEXTO ===== */
+        .content {
+            padding: 24px 16px;
         }
 
         h1 {
@@ -71,14 +78,14 @@
         p {
             color: #555;
             font-size: 15px;
-            margin-bottom: 0;
+            margin: 0;
         }
 
-        /* ===== MOBILE (SMARTPHONE) ===== */
+        /* ===== MOBILE ===== */
         @media (max-width: 480px) {
-
-            .container {
-                padding: 20px 14px;
+            .store-btn {
+                width: 64px;
+                height: 64px;
             }
 
             h1 {
@@ -88,40 +95,6 @@
             p {
                 font-size: 14px;
             }
-
-            .store-btn {
-                width: 72px;
-                height: 72px;
-            }
-
-            .android-btn {
-                bottom: 42px;
-                left: 28%;
-            }
-
-            .ios-btn {
-                bottom: 42px;
-                left: 72%;
-            }
-        }
-
-        /* ===== TELAS MUITO PEQUENAS ===== */
-        @media (max-width: 360px) {
-
-            .store-btn {
-                width: 64px;
-                height: 64px;
-            }
-
-            .android-btn {
-                bottom: 38px;
-                left: 26%;
-            }
-
-            .ios-btn {
-                bottom: 38px;
-                left: 74%;
-            }
         }
     </style>
 </head>
@@ -130,10 +103,9 @@
 
     <div class="container">
 
-        <!-- BANNER COM LINKS SOBRE OS ÍCONES -->
+        <!-- BANNER -->
         <div class="banner">
 
-            <!-- IMAGEM EM JPG -->
             <img src="obrigado.jpg" alt="Baixe o app Plantão Card">
 
             <!-- ANDROID -->
@@ -156,12 +128,13 @@
 
         </div>
 
-        <h1>Obrigado por responder!</h1>
-        <p>Toque no ícone da sua plataforma para baixar o aplicativo.</p>
+        <!-- TEXTO -->
+        <div class="content">
+            <h1>Obrigado por responder!</h1>
+            <p>Toque no ícone da sua plataforma para baixar o aplicativo.</p>
+        </div>
 
     </div>
 
 </body>
 </html>
-
-
