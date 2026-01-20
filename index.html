@@ -19,7 +19,7 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
+            background-color: #000;
         }
 
         .container {
@@ -28,48 +28,43 @@
             padding: 0;
         }
 
-        /* ===== BANNER ===== */
+        /* ===== BANNER COMO BACKGROUND ===== */
         .banner {
             position: relative;
             width: 100vw;
+            height: auto;
+            background-image: url("obrigado.jpg"); /* DESKTOP */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: top center;
         }
 
-.banner {
-    position: relative;
-    width: 100vw;
-}
-
-/* IMAGENS */
-.banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: relative;
-    z-index: 1;
-}
-
-/* BOTÕES INVISÍVEIS */
-.store-btn {
-    position: absolute;
-    z-index: 2; /* ESSENCIAL */
-    width: 78px;
-    height: 78px;
-    border-radius: 50%;
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0);
-}
-
+        /* Mantém proporção da imagem */
+        .banner::before {
+            content: "";
+            display: block;
+            padding-top: 56.25%; /* ajuste se necessário */
         }
 
-        /* ALINHAMENTO */
+        /* ===== BOTÕES ===== */
+        .store-btn {
+            position: absolute;
+            z-index: 10;
+            width: 78px;
+            height: 78px;
+            border-radius: 50%;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0);
+        }
+
         .android-btn {
-            bottom: 12%;
+            bottom: 18%;
             left: 50%;
             transform: translateX(-120%);
         }
 
         .ios-btn {
-            bottom: 12%;
+            bottom: 18%;
             left: 50%;
             transform: translateX(20%);
         }
@@ -77,12 +72,8 @@
         /* ===== MOBILE ===== */
         @media (max-width: 768px) {
 
-            .img-desktop {
-                display: none;
-            }
-
-            .img-mobile {
-                display: block;
+            .banner {
+                background-image: url("obrigado-mobile.jpg");
             }
 
             .store-btn {
@@ -91,12 +82,12 @@
             }
 
             .android-btn {
-                bottom: 10%;
+                bottom: 14%;
                 transform: translateX(-115%);
             }
 
             .ios-btn {
-                bottom: 10%;
+                bottom: 14%;
                 transform: translateX(15%);
             }
         }
@@ -108,12 +99,6 @@
     <div class="container">
 
         <div class="banner">
-
-            <!-- DESKTOP -->
-            <img src="obrigado.jpg" class="img-desktop" alt="Baixe o app Plantão Card">
-
-            <!-- MOBILE -->
-            <img src="obrigadomobile.jpg" class="img-mobile" alt="Baixe o app Plantão Card">
 
             <!-- ANDROID -->
             <a
@@ -139,4 +124,3 @@
 
 </body>
 </html>
-
