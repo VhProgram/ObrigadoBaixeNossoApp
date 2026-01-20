@@ -5,11 +5,6 @@
     <title>Obrigado!</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página de agradecimento e download do app Plantão Card para Android e iOS">
-
-    <meta property="og:title" content="Obrigado por responder!">
-    <meta property="og:description" content="Baixe o app Plantão Card agora">
-    <meta property="og:type" content="website">
 
     <style>
         * {
@@ -18,36 +13,37 @@
 
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #000;
+            background: #000;
         }
 
-        .container {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* ===== BANNER ===== */
         .banner {
             position: relative;
             width: 100vw;
-            height: 100vh; /* ALTURA DEFINIDA */
-            background-image: url("obrigado.jpg"); /* DESKTOP */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+            height: 100vh;
+            background: url("obrigado.jpg") center / cover no-repeat;
         }
 
-        /* ===== BOTÕES ===== */
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .banner {
+                background-image: url("obrigado-mobile.jpg");
+            }
+        }
+
+        /* BOTÕES */
         .store-btn {
             position: absolute;
             z-index: 10;
-            width: 78px;
-            height: 78px;
-            border-radius: 50%;
+            width: 80px;
+            height: 80px;
             cursor: pointer;
-            background: rgba(0, 0, 0, 0);
+        }
+
+        .store-btn span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            pointer-events: auto;
         }
 
         .android-btn {
@@ -62,25 +58,10 @@
             transform: translateX(20%);
         }
 
-        /* ===== MOBILE ===== */
         @media (max-width: 768px) {
-            .banner {
-                background-image: url("obrigado-mobile.jpg");
-            }
-
             .store-btn {
                 width: 64px;
                 height: 64px;
-            }
-
-            .android-btn {
-                bottom: 14%;
-                transform: translateX(-115%);
-            }
-
-            .ios-btn {
-                bottom: 14%;
-                transform: translateX(15%);
             }
         }
     </style>
@@ -88,29 +69,25 @@
 
 <body>
 
-    <div class="container">
+    <div class="banner">
 
-        <div class="banner">
+        <!-- ANDROID -->
+        <a
+            href="https://play.google.com/store/apps/details?id=com.flutter_app.plantaocard&hl=en"
+            class="store-btn android-btn"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span></span>
+        </a>
 
-            <!-- ANDROID -->
-            <a
-                href="https://play.google.com/store/apps/details?id=com.flutter_app.plantaocard&hl=en"
-                class="store-btn android-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Baixar aplicativo para Android">
-            </a>
-
-            <!-- IOS -->
-            <a
-                href="https://apps.apple.com/us/app/plantaoflex/id6443572321?l=pt-BR"
-                class="store-btn ios-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Baixar aplicativo para iOS">
-            </a>
-
-        </div>
+        <!-- IOS -->
+        <a
+            href="https://apps.apple.com/us/app/plantaoflex/id6443572321?l=pt-BR"
+            class="store-btn ios-btn"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span></span>
+        </a>
 
     </div>
 
