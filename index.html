@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- MOBILE SAFE -->
+  <!-- ESSENCIAL PARA MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Baixe nosso App</title>
+  <title>Obrigado</title>
 
   <style>
     * {
@@ -14,52 +14,53 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      overflow: hidden;
       background: #000;
-      display: flex;
-      justify-content: center;
     }
 
     .page {
       position: relative;
-      width: 100%;
-      max-width: 430px; /* padrão mobile */
+      width: 100vw;
+      height: 100vh;
     }
 
+    /* ARTE EM TELA CHEIA */
     .page img.bg {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
 
-    /* ÁREA DOS BOTÕES */
-    .stores {
+    /* ÁREAS DE CLIQUE (SOBRE OS ÍCONES) */
+    .click-area {
       position: absolute;
-      bottom: 20%;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      gap: 48px;
-      pointer-events: none; /* evita bug Android */
+      bottom: 18%;
+      width: 80px;
+      height: 80px;
     }
 
-    .stores a {
-      width: 72px;
-      height: 72px;
+    .android {
+      left: 35%;
+    }
+
+    .ios {
+      right: 35%;
+    }
+
+    /* ANDROID SAFE */
+    .click-area a {
       display: block;
-      pointer-events: auto; /* clique só aqui */
-    }
-
-    .stores img {
       width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .stores a:active {
-      transform: scale(0.95);
+      height: 100%;
     }
   </style>
 </head>
@@ -69,21 +70,22 @@
   <div class="page">
 
     <!-- ARTE -->
-    <img src="arte.jpg" alt="Baixe nosso app" class="bg">
+    <img src="obrigado.jpg" alt="Obrigado" class="bg">
 
-    <!-- BOTÕES -->
-    <div class="stores">
-      <a href="https://play.google.com/store"
+    <!-- ANDROID -->
+    <div class="click-area android">
+      <a href="https://play.google.com/store/search?q=PLANTAO%20FLEX&c=apps"
          target="_blank"
-         rel="noopener">
-        <img src="android.png" alt="Android">
-      </a>
+         rel="noopener"
+         aria-label="Baixar no Google Play"></a>
+    </div>
 
-      <a href="https://apps.apple.com"
+    <!-- IOS -->
+    <div class="click-area ios">
+      <a href="https://apps.apple.com/br/app/plantaoflex/id6443572321"
          target="_blank"
-         rel="noopener">
-        <img src="ios.png" alt="iOS">
-      </a>
+         rel="noopener"
+         aria-label="Baixar na App Store"></a>
     </div>
 
   </div>
