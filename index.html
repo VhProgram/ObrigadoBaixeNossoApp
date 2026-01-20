@@ -1,95 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Obrigado!</title>
+<meta charset="UTF-8">
+<title>Obrigado</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-        body {
-            margin: 0;
-            background: #000;
-        }
+    body {
+        margin: 0;
+        background: #000;
+    }
 
+    .banner {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background: url("obrigado.jpg") center / cover no-repeat;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
         .banner {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-            background: url("obrigado.jpg") center / cover no-repeat;
+            background-image: url("obrigado-mobile.jpg");
         }
+    }
 
-        /* MOBILE */
-        @media (max-width: 768px) {
-            .banner {
-                background-image: url("obrigado-mobile.jpg");
-            }
-        }
+    /* HOTSPOTS */
+    .btn {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        z-index: 10;
+    }
 
-        /* BOTÕES */
-        .store-btn {
-            position: absolute;
-            z-index: 10;
-            width: 80px;
-            height: 80px;
-            cursor: pointer;
-        }
+    .android {
+        bottom: 18%;
+        left: 50%;
+        transform: translateX(-120%);
+    }
 
-        .store-btn span {
-            display: block;
-            width: 100%;
-            height: 100%;
-            pointer-events: auto;
-        }
+    .ios {
+        bottom: 18%;
+        left: 50%;
+        transform: translateX(20%);
+    }
 
-        .android-btn {
-            bottom: 18%;
-            left: 50%;
-            transform: translateX(-120%);
+    @media (max-width: 768px) {
+        .btn {
+            width: 64px;
+            height: 64px;
         }
-
-        .ios-btn {
-            bottom: 18%;
-            left: 50%;
-            transform: translateX(20%);
-        }
-
-        @media (max-width: 768px) {
-            .store-btn {
-                width: 64px;
-                height: 64px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body>
 
-    <div class="banner">
+<div class="banner">
 
-        <!-- ANDROID -->
-        <a
-            href="https://play.google.com/store/apps/details?id=com.flutter_app.plantaocard&hl=en"
-            class="store-btn android-btn"
-            target="_blank"
-            rel="noopener noreferrer">
-            <span></span>
-        </a>
-
-        <!-- IOS -->
-        <a
-            href="https://apps.apple.com/us/app/plantaoflex/id6443572321?l=pt-BR"
-            class="store-btn ios-btn"
-            target="_blank"
-            rel="noopener noreferrer">
-            <span></span>
-        </a>
-
+    <!-- ANDROID -->
+    <div
+        class="btn android"
+        onclick="window.location.href='https://play.google.com/store/apps/details?id=com.flutter_app.plantaocard&hl=en'">
     </div>
+
+    <!-- IOS -->
+    <div
+        class="btn ios"
+        onclick="window.location.href='https://apps.apple.com/us/app/plantaoflex/id6443572321?l=pt-BR'">
+    </div>
+
+</div>
 
 </body>
 </html>
