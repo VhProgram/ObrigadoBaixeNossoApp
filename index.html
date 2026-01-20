@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- ESSENCIAL PARA MOBILE -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- ESSENCIAL MOBILE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Obrigado</title>
 
@@ -18,45 +18,41 @@
       margin: 0;
       padding: 0;
       width: 100%;
-      height: 100%;
     }
 
     body {
-      overflow: hidden;
       background: #000;
     }
 
     .page {
       position: relative;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
     }
 
-    /* ARTE EM TELA CHEIA */
-    .page img.bg {
+    /* ARTE RESPONSIVA (SEM 100vh) */
+    .bg {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       display: block;
     }
 
-    /* ÁREAS DE CLIQUE (SOBRE OS ÍCONES) */
+    /* ÁREAS DE CLIQUE */
     .click-area {
       position: absolute;
-      bottom: 18%;
       width: 80px;
       height: 80px;
     }
 
     .android {
-      left: 35%;
+      top: 62%;
+      left: 32%;
     }
 
     .ios {
-      right: 35%;
+      top: 62%;
+      right: 32%;
     }
 
-    /* ANDROID SAFE */
     .click-area a {
       display: block;
       width: 100%;
