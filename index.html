@@ -20,24 +20,22 @@
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f4f6f8;
-            text-align: center;
         }
 
-        /* ===== CONTAINER ===== */
         .container {
             width: 100%;
             margin: 0;
             padding: 0;
         }
 
-        /* ===== BANNER TELA CHEIA ===== */
+        /* ===== BANNER ===== */
         .banner {
             position: relative;
             width: 100vw;
         }
 
         .banner img {
-            width: 100vw;
+            width: 100%;
             height: auto;
             display: block;
         }
@@ -45,40 +43,24 @@
         /* ===== BOTÕES INVISÍVEIS ===== */
         .store-btn {
             position: absolute;
-            width: 80px;
-            height: 80px;
+            width: 78px;
+            height: 78px;
             border-radius: 50%;
             cursor: pointer;
             background: rgba(0, 0, 0, 0);
         }
 
-        /* POSIÇÃO PROPORCIONAL */
+        /* === ALINHAMENTO PRECISO === */
         .android-btn {
-            bottom: 10%;
-            left: 35%;
-            transform: translateX(-50%);
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(-120%);
         }
 
         .ios-btn {
-            bottom: 10%;
-            left: 65%;
-            transform: translateX(-50%);
-        }
-
-        /* ===== TEXTO ===== */
-        .content {
-            padding: 24px 16px;
-        }
-
-        h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #555;
-            font-size: 15px;
-            margin: 0;
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(20%);
         }
 
         /* ===== MOBILE ===== */
@@ -88,12 +70,14 @@
                 height: 64px;
             }
 
-            h1 {
-                font-size: 20px;
+            .android-btn {
+                bottom: 11%;
+                transform: translateX(-115%);
             }
 
-            p {
-                font-size: 14px;
+            .ios-btn {
+                bottom: 11%;
+                transform: translateX(15%);
             }
         }
     </style>
@@ -103,7 +87,6 @@
 
     <div class="container">
 
-        <!-- BANNER -->
         <div class="banner">
 
             <img src="obrigado.jpg" alt="Baixe o app Plantão Card">
@@ -126,12 +109,6 @@
                 aria-label="Baixar aplicativo para iOS">
             </a>
 
-        </div>
-
-        <!-- TEXTO -->
-        <div class="content">
-            <h1>Obrigado por responder!</h1>
-            <p>Toque no ícone da sua plataforma para baixar o aplicativo.</p>
         </div>
 
     </div>
