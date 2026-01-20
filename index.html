@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- ESSENCIAL PARA ANDROID / IOS -->
+  <!-- MOBILE SAFE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Obrigado!</title>
+  <title>Baixe nosso App</title>
 
   <style>
     * {
@@ -16,98 +16,75 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f8;
-      min-height: 100vh;
+      background: #000;
       display: flex;
-      align-items: center;
       justify-content: center;
     }
 
-    .container {
+    .page {
+      position: relative;
       width: 100%;
-      max-width: 420px;
-      padding: 24px;
-      text-align: center;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      max-width: 430px; /* padrão mobile */
     }
 
-    img {
-      max-width: 100%;
+    .page img.bg {
+      width: 100%;
       height: auto;
-      margin-bottom: 24px;
       display: block;
     }
 
-    h1 {
-      font-size: 22px;
-      margin-bottom: 16px;
-      color: #333;
-    }
-
-    p {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 24px;
-    }
-
-    .btn {
-      display: block;
+    /* ÁREA DOS BOTÕES */
+    .stores {
+      position: absolute;
+      bottom: 20%;
+      left: 0;
       width: 100%;
-      padding: 16px;
-      margin-bottom: 12px;
-      background: #28a745;
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      touch-action: manipulation;
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      pointer-events: none; /* evita bug Android */
     }
 
-    .btn:active {
-      opacity: 0.85;
+    .stores a {
+      width: 72px;
+      height: 72px;
+      display: block;
+      pointer-events: auto; /* clique só aqui */
     }
 
-    .btn.android {
-      background: #3ddc84;
-      color: #000;
+    .stores img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    .btn.ios {
-      background: #000;
+    .stores a:active {
+      transform: scale(0.95);
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="page">
 
-    <!-- IMAGEM: coloque o arquivo na mesma pasta -->
-    <img src="logo.png" alt="Logo">
+    <!-- ARTE -->
+    <img src="arte.jpg" alt="Baixe nosso app" class="bg">
 
-    <h1>Obrigado por responder!</h1>
-    <p>Baixe agora o aplicativo:</p>
+    <!-- BOTÕES -->
+    <div class="stores">
+      <a href="https://play.google.com/store"
+         target="_blank"
+         rel="noopener">
+        <img src="android.png" alt="Android">
+      </a>
 
-    <!-- BOTÕES FUNCIONAIS NO ANDROID -->
-    <a class="btn android"
-       href="https://play.google.com/store"
-       target="_blank"
-       rel="noopener">
-       Baixar no Android
-    </a>
-
-    <a class="btn ios"
-       href="https://apps.apple.com"
-       target="_blank"
-       rel="noopener">
-       Baixar no iOS
-    </a>
+      <a href="https://apps.apple.com"
+         target="_blank"
+         rel="noopener">
+        <img src="ios.png" alt="iOS">
+      </a>
+    </div>
 
   </div>
 
