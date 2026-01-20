@@ -28,22 +28,15 @@
             padding: 0;
         }
 
-        /* ===== BANNER COMO BACKGROUND ===== */
+        /* ===== BANNER ===== */
         .banner {
             position: relative;
             width: 100vw;
-            height: auto;
+            height: 100vh; /* ALTURA DEFINIDA */
             background-image: url("obrigado.jpg"); /* DESKTOP */
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
-            background-position: top center;
-        }
-
-        /* Mantém proporção da imagem */
-        .banner::before {
-            content: "";
-            display: block;
-            padding-top: 56.25%; /* ajuste se necessário */
+            background-position: center;
         }
 
         /* ===== BOTÕES ===== */
@@ -71,7 +64,6 @@
 
         /* ===== MOBILE ===== */
         @media (max-width: 768px) {
-
             .banner {
                 background-image: url("obrigado-mobile.jpg");
             }
